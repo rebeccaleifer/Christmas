@@ -9,7 +9,7 @@ const knex = require("knex")({
     connection: {
         host: "christmasdb.cluster-cyojq0o6xjnw.us-west-1.rds.amazonaws.com",
         user: "admin",
-        password: "adminadmin",
+        password: "Passw0rd!",
         database: "Christmas",
         port: 3306,
     },
@@ -18,7 +18,7 @@ const knex = require("knex")({
 app.get("/", (req,res) => {
     knex
     .select()
-    .from("Costumes")
+    .from("sweaters")
     .then((result) => {
         res.render("index.ejs", {aCostumes: result});
     });
