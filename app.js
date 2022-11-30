@@ -20,7 +20,7 @@ app.get("/", (req,res) => {
     .select()
     .from("sweaters")
     .then((result) => {
-        res.render("index.ejs", {aCostumes: result});
+        res.render("index.ejs", {asweaters: result});
     });
 });
 
